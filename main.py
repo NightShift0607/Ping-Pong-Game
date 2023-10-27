@@ -35,6 +35,9 @@ while flag:
     screen.update()
     sleep(0.1)
     ball.move_ball()
+    # ball bouncing from top and bottom wall
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounce()
 
 
 screen.exitonclick()
